@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 env:
-  AZURE_WEBAPP_NAME: painting-test
+  AZURE_WEBAPP_NAME: painting-website-test
 
 jobs:
   build:
@@ -16,10 +16,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.x
-    - name: Set up env
-      run: |
-        python3 -m venv venv
-        source venv/bin/activate
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -29,6 +25,6 @@ jobs:
     - name: Deploy web App using GH Action azure/webapps-deploy
       uses: azure/webapps-deploy@v2
       with:
-        app-name: painting-test
-        publish-profile: <publishData><publishProfile profileName="painting-test - Web Deploy" publishMethod="MSDeploy" publishUrl="painting-test.scm.azurewebsites.net:443" msdeploySite="painting-test" userName="$painting-test" userPWD="ezBkshJFD8ous1RYy0Z9jmFeee79gWc3tBs35SGLbYvs7WdqQwDb2lppfsum" destinationAppUrl="http://painting-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="painting-test - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-cbr20-003.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="painting-test\$painting-test" userPWD="ezBkshJFD8ous1RYy0Z9jmFeee79gWc3tBs35SGLbYvs7WdqQwDb2lppfsum" destinationAppUrl="http://painting-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="painting-test - Zip Deploy" publishMethod="ZipDeploy" publishUrl="painting-test.scm.azurewebsites.net:443" userName="$painting-test" userPWD="ezBkshJFD8ous1RYy0Z9jmFeee79gWc3tBs35SGLbYvs7WdqQwDb2lppfsum" destinationAppUrl="http://painting-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="painting-test - ReadOnly - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-cbr20-003dr.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="painting-test\$painting-test" userPWD="ezBkshJFD8ous1RYy0Z9jmFeee79gWc3tBs35SGLbYvs7WdqQwDb2lppfsum" destinationAppUrl="http://painting-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>
+        app-name: painting-website-test
+        publish-profile: <publishData><publishProfile profileName="painting-website-test - Web Deploy" publishMethod="MSDeploy" publishUrl="painting-website-test.scm.azurewebsites.net:443" msdeploySite="painting-website-test" userName="$painting-website-test" userPWD="6zxeaKxZaBX91LhJT3BufernphHlHWaRvE850qldG2f0zj7qACfqu7RbSYJ4" destinationAppUrl="http://painting-website-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="painting-website-test - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-blu-219.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="painting-website-test\$painting-website-test" userPWD="6zxeaKxZaBX91LhJT3BufernphHlHWaRvE850qldG2f0zj7qACfqu7RbSYJ4" destinationAppUrl="http://painting-website-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="painting-website-test - Zip Deploy" publishMethod="ZipDeploy" publishUrl="painting-website-test.scm.azurewebsites.net:443" userName="$painting-website-test" userPWD="6zxeaKxZaBX91LhJT3BufernphHlHWaRvE850qldG2f0zj7qACfqu7RbSYJ4" destinationAppUrl="http://painting-website-test.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>
 

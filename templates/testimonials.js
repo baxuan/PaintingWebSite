@@ -62,4 +62,4 @@ var testimonials_html = testimonials_list.reduce
         </div>
     `, ""
 ); 
-document.getElementById("testimonials").querySelector(".carousel-inner").innerHTML+= testimonials_html
+document.getElementById("testimonials-div").querySelector(".carousel-inner").innerHTML+= testimonials_html

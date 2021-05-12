@@ -1,0 +1,39 @@
+#navigation
+{
+    /* position: sticky; */
+    /* background-color: white; */
+    background-color: orange;
+    width: 100%;
+    z-index: 1000;
+}
+#navigation h2
+{
+    font-size: large;
+}
+#menu * 
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#testimonials-div
+{
+    height: 45vh;
+    background-color: #527cb8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#whatwedo
+{
+    background-color: #527cb8;
+    color: white;
+    text-align: center !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+}

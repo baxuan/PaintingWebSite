@@ -1,7 +1,5 @@
 #navigation
 {
-    /* position: sticky; */
-    /* background-color: white; */
     background-color: orange;
     width: 100%;
     z-index: 1000;
@@ -24,7 +22,6 @@
     justify-content: center;
     text-align: center;
 }
-
 #whatwedo
 {
     background-color: #527cb8;
@@ -36,4 +33,26 @@
     padding-bottom: 1em;
     padding-left: 5em;
     padding-right: 5em;
+}
+#contact-information
+{
+    background-color: #527cb8;
+    color: white;
+    margin: 3rem; 
+    padding: 3rem;
+}
+#contact-information a 
+{
+    color: white;
+}
+@media only screen and (max-width: 768px)
+{
+    #navigation
+    {
+        position: relative;
+    }    
+    #navigation h2
+    {
+        font-size: medium;
+    }
 }

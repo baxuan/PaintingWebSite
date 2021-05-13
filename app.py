@@ -19,8 +19,11 @@ def send_email():
     surburb = request.form['surburb']
     message = request.form['message']
 
+    file = open("api.txt")
 
-    SENDGRID_API_KEY = config("MAIL_API_KEY")
+
+    SENDGRID_API_KEY = file.read()
+    print(SENDGRID_API_KEY)
     message = Mail(
         from_email='noreplypainting@yopmail.com', 
         to_emails='daluxepainting@gmail.com', 

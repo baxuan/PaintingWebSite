@@ -1,6 +1,7 @@
 from flask import Flask, request, send_from_directory, render_template, redirect, url_for
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
+from decouple import config
 app = Flask(__name__)
 
 @app.route('/')
@@ -19,10 +20,10 @@ def send_email():
     message = request.form['message']
 
 
-    SENDGRID_API_KEY = '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'
+    SENDGRID_API_KEY = config("MAIL_API_KEY")
     message = Mail(
-        from_email='deluxpaiting@yopmail.com', 
-        to_emails='deluxpaiting@yopmail.com', 
+        from_email='noreplypainting@yopmail.com', 
+        to_emails='daluxepainting@gmail.com', 
         subject='Asking for free no-obligation quote from '+ name + ' in '+ surburb + ' phone number: '+ phone,
         plain_text_content=message
     )

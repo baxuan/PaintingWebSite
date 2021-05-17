@@ -1,11 +1,11 @@
-name: Python CI
+name: Deploy to production
 on: 
 
   push:
     branches: [ master ]
 
 env:
-  AZURE_WEBAPP_NAME: deluxepaintingservice
+  AZURE_WEBAPP_NAME: daluxepaintingservice
 
 jobs:
   build:
@@ -25,6 +25,6 @@ jobs:
     - name: Deploy web App using GH Action azure/webapps-deploy
       uses: azure/webapps-deploy@v2
       with:
-        app-name: deluxepaintingservice
-        publish-profile: <publishData><publishProfile profileName="deluxepaintingservice - Web Deploy" publishMethod="MSDeploy" publishUrl="deluxepaintingservice.scm.azurewebsites.net:443" msdeploySite="deluxepaintingservice" userName="$deluxepaintingservice" userPWD="2jvyrSkMWqvhGMYCvCmdGsecNinB0sPxBAnuaauLf4gZtpP9JPB2QjuWnXN9" destinationAppUrl="http://deluxepaintingservice.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="deluxepaintingservice - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-blu-249.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="deluxepaintingservice\$deluxepaintingservice" userPWD="2jvyrSkMWqvhGMYCvCmdGsecNinB0sPxBAnuaauLf4gZtpP9JPB2QjuWnXN9" destinationAppUrl="http://deluxepaintingservice.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="deluxepaintingservice - Zip Deploy" publishMethod="ZipDeploy" publishUrl="deluxepaintingservice.scm.azurewebsites.net:443" userName="$deluxepaintingservice" userPWD="2jvyrSkMWqvhGMYCvCmdGsecNinB0sPxBAnuaauLf4gZtpP9JPB2QjuWnXN9" destinationAppUrl="http://deluxepaintingservice.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>
+        app-name: daluxepaintingservice
+        publish-profile: <publishData><publishProfile profileName="daluxepaintingservice - Web Deploy" publishMethod="MSDeploy" publishUrl="daluxepaintingservice.scm.azurewebsites.net:443" msdeploySite="daluxepaintingservice" userName="$daluxepaintingservice" userPWD="GHFjskHa5nj33B0tkJsC41xWLaNJpw4Ndn01nseGJlpL3nxT8oAE20joZYtu" destinationAppUrl="http://daluxepaintingservice.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="daluxepaintingservice - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-blu-249.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="daluxepaintingservice\$daluxepaintingservice" userPWD="GHFjskHa5nj33B0tkJsC41xWLaNJpw4Ndn01nseGJlpL3nxT8oAE20joZYtu" destinationAppUrl="http://daluxepaintingservice.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="daluxepaintingservice - Zip Deploy" publishMethod="ZipDeploy" publishUrl="daluxepaintingservice.scm.azurewebsites.net:443" userName="$daluxepaintingservice" userPWD="GHFjskHa5nj33B0tkJsC41xWLaNJpw4Ndn01nseGJlpL3nxT8oAE20joZYtu" destinationAppUrl="http://daluxepaintingservice.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>
 

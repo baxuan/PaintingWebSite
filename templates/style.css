@@ -1,0 +1,74 @@
+#navigation h2
+{
+    font-size: large;
+    padding: 0.5rem;
+}
+#menu * 
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+#home
+{
+    background-image: url("https://www.capitalpaintingservices.co.nz/wp-content/uploads/2017/07/painting-black-paint-roller-1080x675.jpg");
+    height: 50vh;
+    margin: 1rem;
+
+}
+.home-title
+{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+.home-title h1
+{
+    color: #527cb8;
+}
+.home-title h4
+{
+    color: white;
+}
+#testimonials-div
+{
+    height: 45vh;
+    background-color: #527cb8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#whatwedo
+{
+    background-color: #527cb8;
+    color: white;
+    text-align: center !important;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+#contact-information
+{
+    background-color: #527cb8;
+    color: white;
+    margin: 3rem; 
+    padding: 3rem;
+}
+#contact-information a 
+{
+    color: white;
+}
+@media only screen and (max-width: 768px)
+{
+    #navigation
+    {
+        position: relative;
+    }    
+    #navigation h2
+    {
+        font-size: medium;
+    }
+}

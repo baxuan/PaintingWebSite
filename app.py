@@ -24,7 +24,7 @@ def send_email():
     SENDGRID_API_KEY = file.read()
     message = Mail(
         from_email='donotanswer@yopmail.com', 
-        to_emails='blastor555@yopmail.com', 
+        to_emails='dinhtannguyen78@gmail.com.com', 
         subject='Asking for free no-obligation quote from '+ name + ' in '+ surburb + ' phone number: '+ phone,
         plain_text_content=message
     )
